@@ -1,5 +1,8 @@
 import React from 'react';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+
+const menuTitle = [{key:1, label: '關於我'}, {key:2, label: '區塊鏈'}, {key:3, label:'爬蟲'}];
+
 const { Header, Content, Footer } = Layout;
 const App = () => {
     const {
@@ -12,14 +15,8 @@ const App = () => {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    items={new Array(15).fill(null).map((_, index) => {
-                        const key = index + 1;
-                        return {
-                            key,
-                            label: `nav ${key}`,
-                        };
-                    })}
+                    defaultSelectedKeys={['1']}
+                    items = {menuTitle}
                 />
             </Header>
             <Content
