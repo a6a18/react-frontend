@@ -28,6 +28,7 @@ const App = () => {
                 }}
             >
                 <Breadcrumb
+                    separator=">"
                     style={{
                         margin: '16px 0',
                     }}
