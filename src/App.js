@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
-const menuTitle = [{key:1, label: '關於我'}, {key:2, label: '區塊鏈'}, {key:3, label:'爬蟲'}];
+const menuTitle = [{key:1, label: '關於我'}, {key:2, label: '區塊鏈'}, {key:3, label:'爬蟲'}, {key:4, label: '附近廁所'}];
 
 const { Header, Content, Footer } = Layout;
 const App = () => {
