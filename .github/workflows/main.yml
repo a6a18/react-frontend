@@ -7,17 +7,7 @@ on:
 
 jobs:
     setup-build-deploy:
-        name: Setup, Build, and Deploy
+        name: Deploy Github Page
         runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
-
-            - id: 'auth'
-              uses: 'google-github-actions/auth@v1'
-              with:
-                  credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
-
-            - id: 'deploy'
-              uses: 'google-github-actions/deploy-appengine@v1'
+        run: |
+            npm run deploy
