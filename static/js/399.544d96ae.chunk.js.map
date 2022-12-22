@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/399.544d96ae.chunk.js","mappings":"wIAIA,UAJA,WACI,OAAO,8BACX,C","sources":["screens/Home.js"],"sourcesContent":["function Home() {\n    return <h1>Hi</h1>;\n}\n\nexport default Home;\n"],"names":[],"sourceRoot":""}

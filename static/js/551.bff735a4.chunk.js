@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_frontend=self.webpackChunkreact_frontend||[]).push([[551],{551:function(n,e,r){r.r(e);var t=r(184);e.default=function(){return(0,t.jsx)("h1",{children:"BlockChain"})}}}]);
+//# sourceMappingURL=551.bff735a4.chunk.js.map

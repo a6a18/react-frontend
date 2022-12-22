@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/551.bff735a4.chunk.js","mappings":"wIAIA,UAJA,WACI,OAAO,sCACX,C","sources":["screens/BlockChain/BlockChain.Screen.js"],"sourcesContent":["function BlockChain() {\n    return <h1>BlockChain</h1>;\n}\n\nexport default BlockChain;\n"],"names":[],"sourceRoot":""}

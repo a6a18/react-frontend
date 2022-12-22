@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/963.e4bd7bc6.chunk.js","mappings":"wIAIA,UAJA,WACI,OAAO,qCACX,C","sources":["screens/Scrapying/Scrapying.Screen.js"],"sourcesContent":["function Scrapying() {\n    return <h1>Scrapying</h1>;\n}\n\nexport default Scrapying;\n"],"names":[],"sourceRoot":""}
