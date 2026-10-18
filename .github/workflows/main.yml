@@ -8,6 +8,10 @@ on:
     pull_request:
         branches: [main]
 
+# GITHUB_TOKEN needs write access to push the build to the gh-pages branch
+permissions:
+    contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     build_test:
@@ -16,22 +20,25 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.x] # We will deploy with only one version of node
+                node-version: [24.x] # We will deploy with only one version of node
 
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v7
             - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v7
               with:
                   node-version: ${{ matrix.node-version }}
+                  cache: npm
             - name: npm ci, build
               run: |
                   npm ci
                   npm run build --if-present
+            # Only deploy on pushes to main; pull requests just verify the build
             - name: deploy to gh-pages
-              uses: peaceiris/actions-gh-pages@v3
+              if: github.event_name == 'push'
+              uses: peaceiris/actions-gh-pages@v4
               with:
-                  deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./build
